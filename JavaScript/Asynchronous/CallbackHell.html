@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b, callback) {
+        setTimeout(function () {
+          let addresult = a + b;
+          callback(addresult + 1);
+        }, 1000);
+      }
+
+      function sub(a, b, callback) {
+        setTimeout(function () {
+          let subresult = a - b;
+          callback(subresult);
+        }, 1000);
+      }
+
+      function div(a, b, callback) {
+        setTimeout(function () {
+          callback(a / b);
+        }, 1000);
+      }
+
+      // Nested callbacks
+      // add(10, 5, function (resultAdd) {
+      //   sub(resultAdd, 3, function (resultSub) {
+      //     div(resultSub, 2, function (resultDiv) {
+      //       console.log("Result:", resultDiv);
+      //     });
+      //   });
+      // });
+
+      add(10, 5, function (addresult) {
+        sub(addresult, 5, function (subresult) {
+          div(subresult, 2, function (divresult) {
+            console.log(divresult);
+          });
+        });
+      });
+
+      // pyramid of doom --> callback hell
+    </script>
+  </body>
+</html>

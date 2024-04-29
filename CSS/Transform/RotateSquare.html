@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #square {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        position: relative;
+        animation: rotateAndMove 5s linear infinite; /* Apply animation */
+      }
+      @keyframes rotateAndMove {
+        0% {
+          left: 10px;
+          transform: rotate(0deg) translateX(0); /* Initial position */
+        }
+        50% {
+          left: 500px;
+          transform: rotate(180deg) translateX(-100px); /* Rotate and move towards left */
+        }
+        100% {
+          left: 1000px;
+          transform: rotate(360deg) translateX(0); /* Back to the original position */
+        }
+      }
+
+      #square2 {
+        width: 100px;
+        height: 100px;
+        background-color: #db5834;
+        position: relative;
+        animation: rotateAndMove2 5s linear infinite; /* Apply animation */
+      }
+      @keyframes rotateAndMove2 {
+        0% {
+          left: 10px;
+          transform: rotate(360deg) translateY(0);
+        }
+        50% {
+          left: 500px;
+          transform: rotate(180deg) translateY(-100px); /* Rotate and move towards left */
+        }
+        100% {
+          left: 1000px;
+          transform: rotate(0deg) translateY(0); /* Initial position */ /* Back to the original position */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="square"></div>
+    <div id="square2">Square 2</div>
+  </body>
+</html>

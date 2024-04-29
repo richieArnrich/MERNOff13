@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        background-color: yellow;
+        height: 350px;
+        width: 350px;
+        /* transform: translate(200px, 100px); */
+        /* transform: translate(200px, 100px) rotate(45deg); */
+        animation: change 6s linear 3s infinite alternate forwards;
+      }
+
+      @keyframes change {
+        0% {
+          background-color: violet;
+        }
+        25% {
+          background-color: red;
+          transform: translate(200px, 75px) rotate(45deg);
+        }
+        50% {
+          background-color: blue;
+          /* transform: rotate(360deg); */
+        }
+        75% {
+          opacity: 0.5;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+  </body>
+</html>

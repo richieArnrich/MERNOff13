@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "Sachin",
+        age: 50,
+        country: "India",
+      };
+
+      let jsonData = JSON.stringify(person); // Convert object to JSON string
+      document.write(jsonData + "<br/>");
+      document.write(typeof jsonData + "<br/>");
+
+      let jsonString = '{"name":"John","age":30,"country":"USA"}';
+      let objPerson = JSON.parse(jsonString); // Convert JSON string back to an Object
+      document.write(jsonString + "<br>");
+      document.write(objPerson.name);
+      //   -----------------------------------------------
+
+      // Object destructuring --> converting an object into its constituent elements
+      let user1 = {
+        name: "Kohli",
+        age: 42,
+        country: "India",
+      };
+
+      let { name, age, country } = user1;
+      console.log(name);
+      console.log(age);
+      console.log(country);
+    </script>
+  </body>
+</html>

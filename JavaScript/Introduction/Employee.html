@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        constructor(name, age, salary) {
+          this.name = name;
+          this.age = age;
+          this.salary = salary;
+        }
+
+        Details() {
+          console.log(this.name);
+          console.log(this.age);
+          console.log(this.salary);
+        }
+
+        static Company = "TechMakers"; //Static property
+      }
+
+      let e1 = new Employee("John", 22, 100);
+      let e2 = new Employee("Abhi", 25, 1000);
+      e1.Details();
+      e2.Details();
+      console.log(Employee.Company);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: yellow;
+      }
+      span {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>Hello welcome to <span>HTML</span></div> -->
+    <!-- div elemement creates a block -->
+    <!-- span tag creates a block inside a block element -->
+    <canvas id="canvas" height="500" width="500" style="border: 1px solid">
+    </canvas>
+    <svg width="500" height="500">
+      <circle cx="50" cy="50" r="40" fill="green" />
+    </svg>
+    <script>
+      // belongs to the canvas
+      let can = document.getElementById("canvas");
+      let ctx = can.getContext("2d");
+      ctx.fillStyle = "red";
+      ctx.fillRect(0, 0, 60, 60);
+    </script>
+  </body>
+</html>

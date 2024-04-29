@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #i1 {
+        background-color: red;
+        display: inline;
+        /* block element will behave as an inline element */
+      }
+
+      #span {
+        background-color: yellow;
+        display: block;
+        /*  inline elements will behave as a block element */
+      }
+
+      .container {
+        display: flex;
+        background-color: lightgrey;
+        /*  makes the container hold its items in one line */
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #div1 {
+        background-color: blue;
+      }
+
+      #div2 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>
+      Hello my name is
+      <div id="i1">Richie</div>
+    </h1> -->
+
+    <!-- <h1>Hello my name is <span id="span">Richie</span></h1> -->
+
+    <div class="container">
+      <div id="div1">
+        <h1>I am on left side</h1>
+      </div>
+      <div id="div2">
+        <p>I am on right side</p>
+      </div>
+    </div>
+  </body>
+</html>

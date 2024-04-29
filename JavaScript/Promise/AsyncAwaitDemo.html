@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Me(data) {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            resolve(data);
+          }, 3000);
+          //   reject(data);
+        });
+      }
+
+      async function Friend(data) {
+        let p = await Me(data);
+        return p;
+      }
+
+      let you = Friend(100);
+      you
+        .then(() => {
+          console.log("Promise is kept, I got my money");
+        })
+        .catch(() => {
+          console.log("Promise is failed, did not get my money");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 4, 5];
+      //   console.log(arr[0]);
+      //   console.log(arr[1]);
+      //   console.log(arr[2]);
+      //   console.log(arr[3]);
+      //   console.log(arr[4]);
+      //   console.log(arr);
+      //   for (let i = 0; i <= arr.length - 1; i++) {
+      //     console.log(arr[i]);
+      //   }
+
+      let [san, ash, shus, parv, prer] = arr;
+      //array destructuring is the process of converting the array into its component elements
+      //   console.log(san);
+
+      let [san1, ash1, shus1, ...parv1] = arr;
+      console.log(san1);
+      console.log(ash1);
+      console.log(shus1);
+      console.log(parv1);
+
+      //   Array restructuring
+
+      let basket1 = ["apple", "mango", "banana", "grapes"];
+      let basket2 = ["strawberry", "orange", "watermelon", "kiwi"];
+      const fruits = [...basket1, ...basket2];
+      //   spread  operator allows an iterable to be expanded in
+      //  places that expect multiple arguments or multiple elements. It can
+      console.log(fruits);
+      console.log(fruits[3]);
+    </script>
+  </body>
+</html>

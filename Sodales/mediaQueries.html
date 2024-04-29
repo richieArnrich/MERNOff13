@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+      }
+
+      #item {
+        height: 100px;
+        width: 100px;
+        background-color: navy;
+        margin: 5px;
+      }
+
+      @media screen and (max-width: 680px) {
+        /* Make the items stack vertically on smaller screens */
+        .container {
+          display: block;
+        }
+      }
+      @media screen and (orientation: portrait) {
+        .container {
+          background-color: lightcoral;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        .container {
+          background-color: lightseagreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="item">Item 1</div>
+      <div id="item">Item 2</div>
+      <div id="item">Item 3</div>
+      <div id="item">Item 4</div>
+      <div id="item">Item 5</div>
+      <div id="item">Item 6</div>
+    </div>
+  </body>
+</html>

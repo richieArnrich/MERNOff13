@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        display: flex;
+        background-color: darkslategrey;
+        color: white;
+        justify-content: space-between;
+      }
+
+      .items {
+        display: flex;
+        align-items: center;
+      }
+
+      #item {
+        background-color: lightblue;
+        color: black;
+        padding: 5px;
+        margin: 5px;
+      }
+      #img1 {
+        height: 250px;
+        border-radius: 125px;
+        padding: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .home {
+        display: flex;
+        background-color: lightyellow;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h2>My Blog</h2>
+      </div>
+      <div class="items">
+        <div id="item">About</div>
+        <div id="item">Gallery</div>
+        <div id="item">Projects</div>
+      </div>
+    </nav>
+    <section class="home">
+      <div>
+        <h1>Welcome to my page</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          eaque similique facilis, incidunt quis suscipit ipsam asperiores
+          veritatis soluta voluptate maxime aut repellendus iusto consectetur
+          sequi aliquam iste molestias dolorem!
+        </p>
+      </div>
+      <div>
+        <img src="./images/mypage.jpg" alt="" id="img1" />
+      </div>
+    </section>
+  </body>
+</html>

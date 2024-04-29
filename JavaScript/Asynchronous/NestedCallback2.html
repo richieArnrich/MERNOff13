@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b, callback) {
+        let r = a + b;
+        console.log("The sum is: " + r);
+        callback(r);
+      }
+
+      function sub(addResult, b, callback2) {
+        let r = addResult - b;
+        // console.log("sub answer is :" + r);
+        callback2();
+      }
+      //   add(10, 5, () => {
+      //     console.log("I am callback function");
+      //   });
+
+      add(10, 5, (addResult) => {
+        sub(addResult, 3, (subResult) => {
+          console.log("The final result is: " + subResult);
+        });
+      });
+    </script>
+  </body>
+</html>

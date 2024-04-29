@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding-bottom: 10000px;
+      }
+      .container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(
+          to left,
+          rgb(237, 136, 136),
+          rgb(228, 232, 228),
+          rgb(194, 194, 239)
+        );
+      }
+
+      .container .widget {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .container .widget #wid {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+      }
+      .container2 {
+        position: relative;
+        top: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .container2 #img1 {
+        border-radius: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="brand">
+        <div>Your Name</div>
+      </div>
+      <div class="widget">
+        <div id="wid">Home</div>
+        <div id="wid">About</div>
+        <div id="wid">Login</div>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
+          veritatis deleniti consequuntur quae amet culpa, consectetur tempora
+          sit, facere nemo eligendi, recusandae laboriosam beatae voluptates
+          odit voluptate ducimus accusamus adipisci.
+        </p>
+      </div>
+      <div>
+        <img src="apple.png" alt="error" id="img1" />
+      </div>
+    </div>
+  </body>
+</html>

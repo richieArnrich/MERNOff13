@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b, callSub) {
+        let r = a + b;
+        console.log(r);
+        callSub(a, b, multiply);
+      }
+
+      function sub(a, b, callMult) {
+        let r = a - b;
+        console.log(r);
+        callMult(a, b, division);
+      }
+
+      function multiply(a, b, callDiv) {
+        let r = a * b;
+        console.log(r);
+        callDiv(a, b);
+      }
+
+      function division(a, b) {
+        let r = a / b;
+        console.log(r);
+      }
+
+      add(20, 5, sub);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiples</title>
+  </head>
+  <body>
+    <label for="num">Enter a number</label>
+    <input type="text" id="num" required />
+    <button onclick="getMultiple()">Submit</button>
+    <script>
+      function getMultiple() {
+        const numInput = document.getElementById("num");
+        let number = parseInt(numInput.value);
+        // console.log(number);
+        for (let i = 1; i <= 10; i++) {
+          let pro = number * i;
+          console.log(pro);
+          document.write(pro + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

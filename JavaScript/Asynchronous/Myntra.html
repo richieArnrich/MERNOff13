@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function placeOrder(Co) {
+        console.log("Welcome to myntra");
+        console.log("Place your orders here");
+        setTimeout(() => {
+          Co();
+        }, 1000);
+      }
+
+      function confirmOrder() {
+        console.log("Order confirmed successfully!");
+        console.log("Please choose payment method");
+        paymentMethod();
+      }
+
+      function paymentMethod() {
+        console.log("Cash On delivery accepted");
+        Delivery();
+      }
+
+      function Delivery() {
+        console.log("Your order is on the way");
+      }
+
+      placeOrder(confirmOrder);
+    </script>
+  </body>
+</html>

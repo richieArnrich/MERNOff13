@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Add() {
+        // Named functions - these have a name given to the
+        // function that can be called later by this name
+        // Non parametrised
+        let a = 10;
+        let b = 20;
+        let r = a + b;
+        console.log(r);
+      }
+
+      Add(); //function call statement
+
+      function Subtract(a, b) {
+        // Parametrisation - passing values into the function
+        let r = a - b;
+        console.log(r);
+      }
+
+      Subtract(5, 3); // calling with parameters
+
+      //   Anonymous functions
+      let mul = function (a, b) {
+        let r = a * b;
+        console.log(r);
+      };
+      mul(4, 6); // calling anonymous function
+
+      // Arrow functions  are similar to normal functions
+      // but they are shorter and can only have one expression inside them.
+      // ECMAScript 6 version - ES6
+      let div = (a, b) => {
+        let r = a / b;
+        console.log(r);
+      };
+
+      div(8, 2); // calling arrow function
+    </script>
+  </body>
+</html>

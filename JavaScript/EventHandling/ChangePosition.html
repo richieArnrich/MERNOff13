@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .green {
+        background-color: green;
+        height: 400px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .red {
+        background-color: red;
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="green" id="green">
+      <div class="red"></div>
+    </div>
+    <button onclick="ChangeRed()">Change Red</button>
+    <script>
+      let toggle = true;
+      function ChangeRed() {
+        if (toggle) {
+          document.getElementById("green").style.justifyContent = "flex-start";
+          toggle = false;
+        } else {
+          document.getElementById("green").style.justifyContent = "flex-end";
+          toggle = true;
+        }
+      }
+    </script>
+  </body>
+</html>

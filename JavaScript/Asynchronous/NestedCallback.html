@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b, callback) {
+        let r = a + b;
+        console.log("sum is: " + r);
+        callback(r, 3);
+      }
+      function sub(x, y, cb) {
+        setTimeout(() => {
+          const result = x - y;
+          cb(result);
+        }, 2000);
+      }
+      // Callback Hell
+      add(2, 5, (addResult, c) => {
+        sub(addResult, c, (subResult) => {
+          console.log(`The final Result is ${subResult}`);
+        });
+      });
+    </script>
+  </body>
+</html>

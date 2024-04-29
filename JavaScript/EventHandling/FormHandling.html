@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="myName">Name</label>
+      <input
+        type="text"
+        id="myName"
+        placeholder="Enter your name"
+        onchange="handleForm()"
+      />
+    </form>
+    <p id="message"></p>
+
+    <script>
+      let nameEle = document.getElementById("myName");
+      function handleForm() {
+        console.log(nameEle.value);
+        document.getElementById("message").innerHTML = nameEle.value;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        background-color: blue;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin-left: auto;
+        animation-name: changeColor;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes changeColor {
+        0% {
+          background-color: red;
+          top: 0px;
+          right: 0px;
+        } /* From red to ... */
+        50% {
+          background-color: yellow;
+          top: 50px;
+          right: 100px;
+        }
+        100% {
+          background-color: violet;
+          top: 100px;
+          right: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+  </body>
+</html>

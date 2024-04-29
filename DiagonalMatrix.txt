@@ -1,0 +1,60 @@
+import java.util.Scanner;
+import java.util.*;
+
+public class SortMatrixDiagonals {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter n value");
+        int n = scanner.nextInt();
+        int[][] matrix = new int[n][n];
+        
+        // Input matrix elements
+        System.out.println("Enter array elements");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        
+        // Sort diagonals
+        sortDiagonals(matrix, n);
+        
+        // Output sorted matrix
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+        scanner.close();
+	}
+	
+	public static void sortDiagonals(int[][] matrix, int n) {
+        // Sort diagonals starting from the first row
+        for (int i = 0; i < n; i++) {
+            sortDiagonal(matrix, i, 0, n);
+        }
+        
+        // Sort diagonals starting from the first column
+        for (int j = 1; j < n; j++) {
+            sortDiagonal(matrix, 0, j, n);
+        }
+    }
+	public static void sortDiagonal(int[][] matrix, int startRow, int startCol, int n) {
+        List<Integer> diagonalElements = new ArrayList<>();
+        
+        // Collect elements of the diagonal
+        for (int i = startRow, j = startCol; i < n && j < n; i++, j++) {
+            diagonalElements.add(matrix[i][j]);
+        }
+        
+        // Sort the diagonal elements
+        Collections.sort(diagonalElements);
+        
+        // Update matrix with sorted diagonal elements
+        for (int i = startRow, j = startCol, k = 0; i < n && j < n; i++, j++, k++) {
+            matrix[i][j] = diagonalElements.get(k);
+        }
+    }
+}

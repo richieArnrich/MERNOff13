@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function OrderPizza() {
+        console.log("Hi thank you for your order");
+        console.log("It will take 30 mins to deliver");
+        setTimeout(() => {
+          console.log("Pizza delivered after 30 mins");
+        }, 7000);
+      }
+
+      function CallFriend() {
+        console.log("Calling my friend");
+        console.log("He takes 30 mins to arrive");
+      }
+
+      OrderPizza();
+      CallFriend();
+    </script>
+  </body>
+</html>

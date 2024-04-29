@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      onchange="myFunction()"
+      id="name"
+      value=""
+    /><br /><br />
+    <button onclick="handleSubmit()">Submit</button><br /><br />
+    <p id="result"></p>
+
+    <script>
+      function myFunction() {
+        let n = document.getElementById("name").value;
+        console.log(n);
+        document.getElementById("result").innerHTML = n;
+      }
+    </script>
+  </body>
+</html>

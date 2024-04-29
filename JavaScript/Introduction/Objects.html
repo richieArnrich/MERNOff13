@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Objects</title>
+  </head>
+  <body>
+    <script>
+      const player1 = {
+        name: "Sachin",
+        no: 10,
+        play: "bat",
+        print: function () {
+          console.log(this.name);
+          console.log(this.no);
+          console.log(this.play);
+        },
+      };
+      // player1.print();
+
+      // function assigns  a value of a property of the object
+
+      // person --> name, age ,occupation
+      function AssignValues(n, a, occ) {
+        const person = {
+          name: n,
+          age: a,
+          occupation: occ,
+          print: function () {
+            console.log(this.name);
+            console.log(this.age);
+            console.log(this.occupation);
+          },
+        };
+        person.print();
+      }
+
+      function AssignValues2(n, a, occ) {
+        const person = {
+          name: n,
+          age: a,
+          occupation: occ,
+          printData: () => {
+            // this keyword  refers to the object itself here, in
+            // arrow functions it refers to the owner of the function (meaning it does not work)
+            console.log("Hi arrow function called");
+            console.log(this.name); //gives undefined
+            console.log(this.age); //gives undefined
+            console.log(this.occupation); //gives undefined
+          },
+        };
+
+        person.printData();
+      }
+
+      // AssignValues("SRK", 50, "Actor");
+      // AssignValues2("Tom Cruise", 60, "Actor");
+
+      // ---------------------------------------------------
+      let car = {
+        name: "Ciaz",
+        brand: "Maruthi",
+        Wheels: {
+          color: "Black",
+          brand: "MRF",
+          type: "Mac Wheel",
+        },
+      };
+
+      console.log(car.name);
+      console.log(car.brand);
+      console.log(car.Wheels.brand);
+    </script>
+  </body>
+</html>

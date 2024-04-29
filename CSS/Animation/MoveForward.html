@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        width: 100%; /* Adjust as needed */
+        height: 300px; /* Adjust as needed */
+        border: 1px solid black; /* Just for visualization */
+        background-color: aliceblue;
+        overflow: hidden;
+      }
+
+      .ball {
+        position: absolute;
+        width: 100px; /* Adjust as needed */
+        height: 100px; /* Adjust as needed */
+        background-color: blue; /* Adjust as needed */
+        /* border-radius: 50%; to make it round */
+        animation: bounce 2s linear infinite, moveForward 4s linear infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          background-color: yellow;
+          bottom: 0;
+          transform: rotate(45deg);
+        }
+        50% {
+          background-color: orange;
+          bottom: 200px; /* Adjust as needed */
+          transform: rotate(-45deg);
+        }
+      }
+
+      @keyframes moveForward {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: calc(100% - 50px); /* Adjust as needed */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ball">I am a ball</div>
+    </div>
+  </body>
+</html>

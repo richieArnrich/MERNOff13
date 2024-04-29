@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Me(amt) {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            reject(amt);
+          }, 2000);
+        });
+      }
+      let you = Me(100);
+      you
+        .then(() => {
+          console.log("Richie gave what I asked");
+        })
+        .catch(() => {
+          console.log("Richie didnt keep his promise");
+        });
+    </script>
+  </body>
+</html>

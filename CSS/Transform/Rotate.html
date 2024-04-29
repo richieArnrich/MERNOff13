@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        /* background-color: rgb(16, 86, 148); */
+        height: 350px;
+        width: 350px;
+        perspective: 1500px;
+        /* position: absolute; */
+      }
+
+      .inner-box {
+        height: 200px;
+        width: 200px;
+        background-color: lightgreen;
+        /* transform: rotate(30deg); */
+        animation: rotateAnimation 5s linear infinite;
+      }
+
+      @keyframes rotateAnimation {
+        from {
+          position: relative;
+          left: 100px;
+          transform: rotateZ(0deg);
+        }
+        to {
+          transform: rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="inner-box"></div>
+      </div>
+    </div>
+  </body>
+</html>

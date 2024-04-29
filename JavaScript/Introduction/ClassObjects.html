@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class & Object</title>
+  </head>
+  <body>
+    <h1>Classes and Objects</h1>
+    <script>
+      class Maruthi {
+        model;
+        brand;
+        color;
+        type;
+
+        constructor(model, brand, color, type) {
+          this.model = model;
+          this.brand = brand;
+          this.color = color;
+          this.type = type;
+        }
+
+        Details() {
+          console.log(this.model);
+          console.log(this.brand);
+          console.log(this.color);
+          console.log(this.type);
+        }
+      }
+
+      let car1 = new Maruthi("Ciaz", "Maruthi", "Blue", "Sedan");
+      car1.Details();
+    </script>
+  </body>
+</html>

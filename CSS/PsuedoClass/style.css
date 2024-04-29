@@ -1,0 +1,25 @@
+table,
+tr,
+th,
+td {
+  border: 1px solid black;
+  width: 50%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: lightblue;
+}
+
+button {
+  background-color: aliceblue;
+  height: 40px;
+  margin: 10px;
+  border: none;
+}
+
+button:hover {
+  background-color: violet;
+  cursor: pointer;
+}

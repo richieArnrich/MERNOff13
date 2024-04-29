@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #green {
+        background-color: green;
+        height: 400px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="green" onmouseover="changeBg()" onmouseout="reset()"></div>
+    <script>
+      let divEle = document.getElementById("green");
+      function changeBg() {
+        divEle.style.backgroundColor = "blue";
+      }
+
+      function reset() {
+        divEle.style.backgroundColor = "green";
+      }
+    </script>
+  </body>
+</html>

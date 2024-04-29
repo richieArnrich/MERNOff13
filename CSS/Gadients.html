@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        height: 500px;
+        width: 500px;
+        background: linear-gradient(
+          rgb(243, 202, 202),
+          rgb(244, 69, 69),
+          rgb(143, 3, 3)
+        );
+      }
+      #div2 {
+        height: 500px;
+        width: 500px;
+        background: linear-gradient(
+          to top right,
+          rgb(88, 2, 2),
+          rgb(255, 235, 235),
+          rgb(79, 79, 173)
+        );
+      }
+
+      #div3 {
+        height: 500px;
+        width: 500px;
+        /* border-radius: 250px; */
+        background: radial-gradient(
+          rgb(223, 203, 203),
+          rgb(255, 235, 235),
+          rgb(79, 79, 173)
+        );
+      }
+      #div4 {
+        background: linear-gradient(
+            rgba(242, 241, 249, 0.192),
+            rgba(62, 58, 108, 0.477),
+            rgba(30, 80, 229, 0.767)
+          ),
+          url("./images/bg.jpeg");
+        background-blend-mode: multiply;
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        width: 500px;
+      }
+      #div5 {
+        /* background-image: url("./images/pexels-zahid-lilani-2104742.jpg"); */
+        background: linear-gradient(
+            rgba(249, 247, 241, 0.192),
+            rgba(108, 79, 58, 0.477),
+            rgba(241, 159, 7, 0.767)
+          ),
+          url("./images/pexels-zahid-lilani-2104742.jpg");
+        background-blend-mode: multiply;
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        width: 700px;
+      }
+      #div6 {
+        margin: 0;
+        height: 500px;
+        background-image: radial-gradient(
+            circle closest-corner at 40% 70%,
+            rgba(247, 212, 159, 0.671),
+            rgba(151, 151, 151, 0.5) 20%,
+            rgba(151, 151, 151, 0.5) 20%
+          ),
+          url("./images/pexels-mohamed-almari-1485894.jpg");
+        background-size: auto, cover;
+        background-position: center;
+        /* background-blend-mode: multiply; */
+      }
+
+      #div7 {
+        height: 200px;
+        background: repeating-radial-gradient(
+          orange,
+          yellow 10%,
+          rgb(176, 224, 176) 15%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <!-- <div id="div1"></div> -->
+      <!-- <div id="div2"></div> -->
+      <!-- <div id="div3"></div> -->
+      <!-- <div id="div4"></div> -->
+      <!-- <div id="div5"></div> -->
+      <!-- <div id="div6"></div> -->
+      <div id="div7"></div>
+    </body>
+  </body>
+</html>
